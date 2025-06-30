@@ -90,24 +90,111 @@
 // a = 10;
 
 // arrow function syntax
-const addition = (num1, num2) => {
-    return num1 + num2;
-}
+// const addition = (num1, num2) => {
+//     return num1 + num2;
+// }
 
 
 
-function subtraction(num1, num2) 
-{
-    return num1 - num2;
-}
+// function subtraction(num1, num2) 
+// {
+//     return num1 - num2;
+// }
 
-const multiply = (num1, num2) => num1 * num2;
+// const multiply = (num1, num2) => num1 * num2;
 
-console.log(multiply(10, 20)); // returns 200
+// console.log(multiply(10, 20)); // returns 200
 
 
 
 //console.log(addition(10, 20)); // returns 30
+
+
+// let numbers = [21, 23, 25, -1, 5, 9, 67, 69, 33, 2, 3  ];
+// let found = numbers.find(function(num){
+//     return num < 10;
+// }
+// )
+
+// // filter 
+
+// let allNumbersLessThanTen = numbers.filter(function(num){
+//     return num < 10;
+// })
+
+
+
+// console.log("All numbers less than 10: ", allNumbersLessThanTen);
+// console.log("The first number less than 10: ", found);
+
+// foreach 
+
+// let numbers = [21, 23, 25, -1, 5, 9, 67, 69, 33, 2, 3  ];
+
+// numbers.forEach(function(value, position)
+// {
+//     console.log("Value: " + value + ", Position: " + position);
+// });
+
+// let items = ["Masood" , 23, true, 45.67, "Fareed", "Hello World"];
+
+// items.forEach(function(value, index) {
+    
+//     console.log("Item at index " + index + " is: " + value);
+// }); 
+
+
+// function maxOfArray(numbers)
+// {
+//     let max = numbers[0];
+    
+//     console.log("The maximum number in the array is: " + max);
+// }
+
+// function maxOfArray(numbers)
+// {
+//     let max = numbers[0];
+//     for (let i = 1; i < numbers.length; i++) {
+//         if (numbers[i] > max) {
+//             max = numbers[i];
+//         }
+//     }
+//     console.log("Maximum number in the array is: " + maxOfArray(numbers));
+//     // Output: Maximum number in the array is: 474
+// }
+
+
+// Object 
+
+let person = {
+    name: "Masood:",
+    age: 23,
+    isStudent: false,
+    height: 5.9,
+    hobbies: ["Reading", "Coding", "Traveling"],
+    walk: function() {
+        console.log(this.name + " is walking.");
+    },
+    greet: function() {
+        console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+    },
+    teach: function(subject) {
+        console.log(this.name + " is teaching " + subject + ".");
+    }
+}
+
+
+
+console.log("Name: " + person.name);
+console.log("Age: " + person.age);
+
+
+
+person.walk();
+person.greet();
+person.teach("JavaScript");
+
+
 
 
 
