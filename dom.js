@@ -63,8 +63,19 @@ function addItem()
    let itemBoxElement = document.getElementById('item-box');
    console.log(itemBoxElement.value);
 
-   
-   document.getElementById('item').innerHTML += itemBoxElement.value + '<br>';
+   let li = document.createElement('li');
+    li.innerText = itemBoxElement.value;
+    li.classList.add('text-light')
+    li.classList.add('bg-dark')
+    li.classList.add('myClass')
+
+    document.getElementById('list-items').appendChild(li);
+
+    itemBoxElement.value = '';
+
+
+
+   //document.getElementById('item').innerHTML += itemBoxElement.value + '<br>';
 }
 
 
