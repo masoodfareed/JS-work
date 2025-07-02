@@ -47,27 +47,27 @@
 
 // Callbacks
 
-function callBackNotification(msg)
-{
-    console.log(msg);
-}
-function greetUser(name, callback)
-{
-    console.log('Hello ' + name);
-    setTimeout(() => {
-        let message = 'Welcome ' + name + ' your greeting is done!'
-        callback(message);
-    } , 5000);
-}
+// function callBackNotification(msg)
+// {
+//     console.log(msg);
+// }
+// function greetUser(name, callback)
+// {
+//     console.log('Hello ' + name);
+//     setTimeout(() => {
+//         let message = 'Welcome ' + name + ' your greeting is done!'
+//         callback(message);
+//     } , 5000);
+// }
 
 
 
-console.log('Task 1. Started');
-console.log('Lets Greet');
+// console.log('Task 1. Started');
+// console.log('Lets Greet');
 
-greetUser('Masood' , callBackNotification);
+// greetUser('Masood' , callBackNotification);
 
-console.log('Continue the task while greeting!')
+// console.log('Continue the task while greeting!')
 
 // Promise - (async - await)
 
@@ -76,4 +76,41 @@ console.log('Continue the task while greeting!')
 //Fulfilled (Resolved): The operation completed successfully.
 
 //Rejected: The operation failed.
+
+// console.log('Starting Async Operation');
+// function fetchData()
+// {
+//     console.log('Fetching Data...');
+//     return new Promise((resolve, reject) => {
+//         let success = true;
+//         setTimeout(() => {
+//             if(success == true)
+//             {
+//                 let data = [{ id: 1, name: 'Masood'},
+//                     {}
+//                 ];
+//                 console.log('Data fetched..')
+//                 resolve(data)
+//             }
+//             else
+//             {
+//                 console.log('Failed to fetch')
+//                 reject('Error in the operation')
+//             }
+//         }, 3000)
+//     })
+// }
+
+// console.log('Starting fetching Data...')
+
+// fetchData()
+// .then((data) => {
+//     console.log(data);
+// })
+// .catch((error) => {
+//     console.log(error)
+// }).
+// finally(() => {
+//     console.log('Promise operation done');
+// });
 
