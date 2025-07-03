@@ -34,38 +34,55 @@
 //     console.log(element.productName)
 // });
 
-let API_url = 'https://jsonplaceholder.typicode.com/todos';
+// let API_url = 'https://jsonplaceholder.typicode.com/todos';
 
-console.log('Started fetching tasks data...')
+// console.log('Started fetching tasks data...')
 
-fetch(API_url).
-then((data) => {
-    if(data.ok != true)
-    {
+// fetch(API_url).
+// then((data) => {
+//     if(data.ok != true)
+//     {
 
-    }
-    return data.json()
-}).
-then( data => {
-    console.log(data);
+//     }
+//     return data.json()
+// }).
+// then( data => {
+//     console.log(data);
 
-    data.forEach(task => {
-        let li = document.createElement('li');
-        if(task.completed == true)
-        {
-              li.innerText = task.title + ' -- (Completed)'; 
-        }
-        else
-        {
-             li.innerText = task.title + ' -- (Incomplete)'; 
-        }
+//     data.forEach(task => {
+//         let li = document.createElement('li');
+//         if(task.completed == true)
+//         {
+//               li.innerText = task.title + ' -- (Completed)'; 
+//         }
+//         else
+//         {
+//              li.innerText = task.title + ' -- (Incomplete)'; 
+//         }
       
         
-        document.getElementById('tasks').appendChild(li);
-    });
-}).
-catch((error) => {
-    console.log(error)
-})
+//         document.getElementById('tasks').appendChild(li);
+//     });
+// }).
+// catch((error) => {
+//     console.log(error)
+// })
 
-console.log('Data Fetched...')
+// console.log('Data Fetched...')
+
+let apiURL = 'http://goweather.xyz/weather/';
+async function getData()
+{
+    let cityValue = document.getElementById('fruit-name').value;
+
+    await fetch(`${apiURL}/${cityValue}`).then((response) =>
+    {
+        return response.json();
+    }).then(result => {
+        console.log(result);
+    })
+
+    console.log(cityValue);
+}
+
+
